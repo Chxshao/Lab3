@@ -1,0 +1,36 @@
+public class bai2 {
+    public bai2() {
+    }
+
+    public class Vector {
+        private double x;
+        private double y;
+        private double z;
+        public Vector(double x, double y, double z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+        public double getX() {
+            return x;
+        }
+        public double getY() {
+            return y;
+        }
+        public double getZ() {
+            return z;
+        }
+        public Vector cong(Vector v) {
+            return new Vector(x + v.getX(), y + v.getY(), z + v.getZ());
+        }
+        public Vector tru(Vector v) {
+            return new Vector(x - v.getX(), y - v.getY(), z - v.getZ());
+        }
+        public Vector nhan(double k) {
+            return new Vector(k * x, k * y, k * z);
+        }
+        public double nhanVH(Vector v) {
+            return x * v.getX() + y * v.getY() + z * v.getZ();
+        }
+    }
+}
